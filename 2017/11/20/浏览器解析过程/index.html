@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://github.com/liumin2015/liumin2015.github.io.git">
   <title>浏览器解析过程 | 柚子的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="奔着优化自己博客的心思，对输入URL到页面加载显示完成这个过程做了一点了解。  ######从输入网址（URL）说起：1.浏览器解析URL地址2.浏览器查找缓存（包括 浏览器缓存                       系统缓存                       路由器缓存）题外话：这一块很值得研究。  ">
+  <meta name="description" content="奔着优化自己博客的心思，对输入URL到页面加载显示完成这个过程做了一点了解。 从输入网址（URL）说起：1.浏览器解析URL地址2.浏览器查找缓存（包括 浏览器缓存                       系统缓存                       路由器缓存）题外话：这一块很值得研究。  查找到缓存就直">
 <meta name="keywords" content="前端">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浏览器解析过程">
 <meta property="og:url" content="https://github.com/liumin2015/liumin2015.github.io.git/2017/11/20/浏览器解析过程/index.html">
 <meta property="og:site_name" content="柚子的博客">
-<meta property="og:description" content="奔着优化自己博客的心思，对输入URL到页面加载显示完成这个过程做了一点了解。  ######从输入网址（URL）说起：1.浏览器解析URL地址2.浏览器查找缓存（包括 浏览器缓存                       系统缓存                       路由器缓存）题外话：这一块很值得研究。  查找到缓存就直接读取，没有则进入下一步。3.DNS域名系统解析域名成为IP地址4">
+<meta property="og:description" content="奔着优化自己博客的心思，对输入URL到页面加载显示完成这个过程做了一点了解。 从输入网址（URL）说起：1.浏览器解析URL地址2.浏览器查找缓存（包括 浏览器缓存                       系统缓存                       路由器缓存）题外话：这一块很值得研究。  查找到缓存就直接读取，没有则进入下一步。3.DNS域名系统解析域名成为IP地址4.通过IP地址">
 <meta property="og:locale" content="中文">
-<meta property="og:updated_time" content="2017-11-21T14:42:51.207Z">
+<meta property="og:updated_time" content="2017-11-21T15:22:06.868Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器解析过程">
-<meta name="twitter:description" content="奔着优化自己博客的心思，对输入URL到页面加载显示完成这个过程做了一点了解。  ######从输入网址（URL）说起：1.浏览器解析URL地址2.浏览器查找缓存（包括 浏览器缓存                       系统缓存                       路由器缓存）题外话：这一块很值得研究。  查找到缓存就直接读取，没有则进入下一步。3.DNS域名系统解析域名成为IP地址4">
+<meta name="twitter:description" content="奔着优化自己博客的心思，对输入URL到页面加载显示完成这个过程做了一点了解。 从输入网址（URL）说起：1.浏览器解析URL地址2.浏览器查找缓存（包括 浏览器缓存                       系统缓存                       路由器缓存）题外话：这一块很值得研究。  查找到缓存就直接读取，没有则进入下一步。3.DNS域名系统解析域名成为IP地址4.通过IP地址">
   
     <link rel="alternative" href="/atom.xml" title="柚子的博客" type="application/atom+xml">
   
@@ -190,8 +190,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>奔着优化自己博客的心思，对输入URL到页面加载显示完成这个过程做了一点了解。</p>
-<p> ######从输入网址（URL）说起：<br>1.浏览器解析URL地址<br>2.浏览器查找缓存（包括 <a href="http://blog.csdn.net/longxibendi/article/details/41630389" target="_blank" rel="noopener">浏览器缓存</a><br>                       系统缓存<br>                       路由器缓存）题外话：这一块很值得研究。<br>  查找到缓存就直接读取，没有则进入下一步。<br>3.DNS域名系统解析域名成为IP地址<br>4.通过IP地址找到服务器，建立TCP连接（三次握手，四次握手）<br>5.浏览器发起HTTP请求数据包<br>6.浏览器的 永久重定向响应<br>7.浏览器跟踪重定向地址<br>8.服务器处理请求并返回数据包给浏览器<br>9.数据包在网络中传输（7层，每层数据由不同的形式）<br>10.浏览器接收HTTP响应，开始读取数据。<br>11.浏览器根据数据创建HTML环境（HTML context），载入资源（css，js）到该环境中。<br>12.浏览器开始读取HTML标签，并将其载入浏览器内存中。浏览器按照标签的语义进行分类，<br>系统资源型（js，css，图片，音频，视频等等）<br>用户界面型（用户控件）在这个过程中，将解析了的标签转换成DOM树。<br>13.浏览器将DOM创建在运行环境中（HTML context）页面基本上渲染出来了。这个过程伴随着异步请求。</p>
-<p> ######关于优化<br>下次再说吧。。。</p>
+<h6 id="从输入网址（URL）说起："><a href="#从输入网址（URL）说起：" class="headerlink" title="从输入网址（URL）说起："></a>从输入网址（URL）说起：</h6><p>1.浏览器解析URL地址<br>2.浏览器查找缓存（包括 <a href="http://blog.csdn.net/longxibendi/article/details/41630389" target="_blank" rel="noopener">浏览器缓存</a><br>                       系统缓存<br>                       路由器缓存）题外话：这一块很值得研究。<br>  查找到缓存就直接读取，没有则进入下一步。<br>3.DNS域名系统解析域名成为IP地址<br>4.通过IP地址找到服务器，建立TCP连接（三次握手，四次握手）<br>5.浏览器发起HTTP请求数据包<br>6.浏览器的 永久重定向响应<br>7.浏览器跟踪重定向地址<br>8.服务器处理请求并返回数据包给浏览器<br>9.数据包在网络中传输（7层，每层数据由不同的形式）<br>10.浏览器接收HTTP响应，开始读取数据。<br>11.浏览器根据数据创建HTML环境（HTML context），载入资源（css，js）到该环境中。<br>12.浏览器开始读取HTML标签，并将其载入浏览器内存中。浏览器按照标签的语义进行分类，<br>系统资源型（js，css，图片，音频，视频等等）<br>用户界面型（用户控件）在这个过程中，将解析了的标签转换成DOM树。<br>13.浏览器将DOM创建在运行环境中（HTML context）页面基本上渲染出来了。这个过程伴随着异步请求。</p>
+<h6 id="关于优化"><a href="#关于优化" class="headerlink" title="关于优化"></a>关于优化</h6><p>下次再说吧。。。</p>
 
       
 
