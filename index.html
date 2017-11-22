@@ -166,6 +166,143 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-货架剩余可乐量" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/11/22/货架剩余可乐量/">货架剩余可乐量</a>
+    </h1>
+  
+
+        
+        <a href="/2017/11/22/货架剩余可乐量/" class="archive-article-date">
+  	<time datetime="2017-11-22T10:58:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-22</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="问题描述：首先，请说出以你住的地方为中心，半径3公里内最大的超市是哪一家。然后，请用有效方法计算出这个超市11月21日晚23-59时，货架上还有多少瓶330毫升的红色听装可口可乐。"><a href="#问题描述：首先，请说出以你住的地方为中心，半径3公里内最大的超市是哪一家。然后，请用有效方法计算出这个超市11月21日晚23-59时，货架上还有多少瓶330毫升的红色听装可口可乐。" class="headerlink" title="问题描述：首先，请说出以你住的地方为中心，半径3公里内最大的超市是哪一家。然后，请用有效方法计算出这个超市11月21日晚23:59时，货架上还有多少瓶330毫升的红色听装可口可乐。"></a>问题描述：首先，请说出以你住的地方为中心，半径3公里内最大的超市是哪一家。然后，请用有效方法计算出这个超市11月21日晚23:59时，货架上还有多少瓶330毫升的红色听装可口可乐。</h4><h4 id="思考过程："><a href="#思考过程：" class="headerlink" title="思考过程："></a>思考过程：</h4><pre><code>1.分析题目。三公里内最大超市，三公里，固定范围，最大，固定大小。
+       提出疑问，为什么是三公里？为什么是最大的超市？
+       三公里，便于调研，获取相关数据。
+       最大超市，好吧，我想不明白为什么是最大的超市。感觉是要增加一点难度...
+       然而，真正的需求是什么呢？再接着审题，尝试从题目中理解用户的正真需求。
+       题目提到，这个超市11月21日晚23:59时，货架上还有多少瓶330毫升的红色听装可口可乐
+       限制条件，21号晚上23:59这个时刻，330ml，红色，听装，可口可乐。问题，瓶数。
+
+2.分析提出该需求的人，我能想到的如下，不是可乐销售商，那么关注点不在可乐销售上面。
+       也不是超市管理员，那么关注点不在货架排放和补货员的工作效率上。
+       是面试官，那么面试官提出这个问题的主要关注点哪里呢？
+       暂且将这个定位为主要用户。
+
+3.继续分析需求是确定超市，确定数量。那么得到的结论是用户想体验的是我如何确定超市和数量。
+       暂且将这个定位为用户正真需求。
+
+4.分析该问题的场景，大超市（地址，大小，员工，货架，联系电话，营业时间，购物者，商品）
+       员工（编号，姓名，职位，类别，年龄，性别,联系方式）
+       商品（条码，名称，类型，价格...）
+       货架（编号，名称，所属区域，负责人，类型...）货架需要补货（时间，数量，速度）
+       购物者（编号，年龄，购物时间，购物内容，性别，名称，住址，联系方式，支付方式...）
+
+5.确定总公式，日货架剩余总量=日货架原有量-顾客日购买量+店员补货数量
+       根据该公式知，要获得日货架总剩余量，那么就要获得后面的三个数据。
+       接下来结合场景开始分析后面数据如何获得。
+       第一个数据，货架原有数量，可以根据可乐占地面积和摆放该种可乐的货架总面积算出。
+       获取方式，实地考察。
+
+        第二个数据，顾客日购买量，顾客日购买量=顾客购买率*时间
+        黑进超市系统[无奈脸]最有效，然而最不可取。这个时候需要去了解一下附近居民对可乐的需求。
+        还有就是听装和瓶装的选择。然而调研成本太高且一天时间做不到。该数据我没有人脉不可得具体的。
+        获取方式，只能估算。
+
+        第三个数据，店员补货数量，该数量和顾客购买速度，店员补货速度，店员补货时间有着密不可分的关系。
+        猜测，一般情况下，货架剩余数量会在总数的10%左右，店员会来补货。
+        获取方式，实际数据可以通过访问得到。
+
+        总结，以上三个数据，我可以比较清楚的获得的数据是第一个。
+        第二个和第三个数据是模糊的，并且，本人没有超市工作的经验，无法估算准确。有必要去一趟超市。
+
+6.实地考察。通过考察了解关键信息，超市关门以前，货架负责人会清货，并将货架补满。
+       因为该超市在22:00关门。所以23:59，是超市非营业时间。
+       推导出，23:59时，货架是满的。并且，顾客日购买量==店员补货量。
+       那么就有，公式日货架剩余总数==日货架原有量（非大促期间）
+       得到结论，满货的情况下，满足330ml，红色，听装，可口可乐的 条件的货量
+       包括原味长罐，0度长罐，6只装的矮罐。还有个樱桃味的，不过是紫色的，不算。
+       由于没带尺子，算面积有点难，也没有从负责人那里问到数量。我就自己数了一下货架原有量：（3+4）*6+6*12=114瓶
+       3列0度，4列原味，每列放6瓶。连装3列，每列2连排，重叠一层，就是2层的意思。共12包联排，每包6只装。在中间没有空隙的情况下。
+       但是实际上，补货员小姐姐告诉我，只要面上是满的，里面不太空就行。也就意味着，里面有3瓶左右的空隙。这个数量是我在拿开第一排之后看到后面排列次序来估算的。
+       所以，最后114-3=111瓶。注孤生的意思么~哭泣。。。
+
+7.总结归纳，货架上的330ml红色听装可口可乐为111瓶。
+</code></pre><h4 id="说明："><a href="#说明：" class="headerlink" title="说明："></a>说明：</h4><pre><code>该题目思考过程有部分仿照货车过山洞思路。
+</code></pre>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">产品</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/学习//" class="article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/11/22/货架剩余可乐量/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-货车过洞问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -691,7 +828,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">产品</a>
+                <a href="javascript:void(0)" class="js-tag color3">杂记</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -699,7 +836,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">杂记</a>
+                <a href="javascript:void(0)" class="js-tag color3">产品</a>
               </li>
             
             <div class="clearfix"></div>
